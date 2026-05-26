@@ -419,6 +419,37 @@ p { margin: 0 0 1em; color: var(--text-dim); }
 }
 .contact-item a, .contact-item span { color: var(--text); font-size: 1.05rem; }
 
+.contact-social .contact-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.social-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.map-embed {
+    margin-top: 48px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    line-height: 0;
+    filter: grayscale(.25) contrast(1.05);
+}
+.map-embed iframe {
+    width: 100%;
+    height: 420px;
+    display: block;
+    border: 0;
+}
+@media (max-width: 640px) {
+    .map-embed iframe { height: 320px; }
+}
+
 /* ---------- Coming soon (shop) ---------- */
 .coming-soon {
     min-height: 70vh;
