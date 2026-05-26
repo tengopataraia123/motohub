@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoLab — მაღაზია (მალე)</title>
+    <meta name="description" content="MotoLab მაღაზია — სათადარიგო ნაწილები და აქსესუარები. მალე გაიხსნება.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <img src="logo.webp" alt="MotoLab" class="logo-img">
+        </a>
+        <nav class="nav">
+            <a href="index.html#services">სერვისები</a>
+            <a href="index.html#team">გუნდი</a>
+            <a href="shop.html">მაღაზია</a>
+            <a href="index.html#booking">ჩაწერა</a>
+            <a href="index.html#contact">კონტაქტი</a>
+        </nav>
+        <a href="index.html#booking" class="btn btn-primary btn-sm nav-cta">ჩაწერა</a>
+    </div>
+</header>
+
+<section class="coming-soon">
+    <div class="container coming-soon-inner">
+        <span class="badge">მალე</span>
+        <h1>მაღაზია იხსნება მალე</h1>
+        <p>ვამზადებთ ორიგინალი სათადარიგო ნაწილებისა და მოტო-აქსესუარების კატალოგს. სანამ ვმუშაობთ — დაგვიკავშირდი ჩაწერისთვის ან კონსულტაციისთვის.</p>
+        <a href="index.html#booking" class="btn btn-primary">სერვისზე ჩაწერა</a>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <span>© <span id="year"></span> MotoLab. ყველა უფლება დაცულია.</span>
+        <span class="footer-tagline">Built for riders, by riders.</span>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
