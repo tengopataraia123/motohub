@@ -120,7 +120,7 @@
         <a href="#hero" class="logo">
             <img src="logo.webp" alt="MotoLab" class="logo-img">
         </a>
-        <nav class="nav">
+        <nav class="nav" id="primaryNav">
             <a href="#services">სერვისები</a>
             <a href="#team">გუნდი</a>
             <a href="shop.html">მაღაზია</a>
@@ -128,6 +128,9 @@
             <a href="#contact">კონტაქტი</a>
         </nav>
         <a href="#booking" class="btn btn-primary btn-sm nav-cta">ჩაწერა</a>
+        <button class="nav-toggle" aria-label="მენიუ" aria-expanded="false" aria-controls="primaryNav">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </header>
 
@@ -376,6 +379,21 @@
 
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primaryNav');
+    if (navToggle && nav) {
+        const closeNav = () => {
+            nav.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        };
+        navToggle.addEventListener('click', () => {
+            const open = nav.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+    }
 
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
